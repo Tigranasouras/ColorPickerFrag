@@ -3,6 +3,15 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    //<androidx.fragment.app.FragmentContainerView
+    android:id="@+id/colorFragment"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1">
+</androidx.fragment.app.FragmentContainerView>
+
+
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"

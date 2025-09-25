@@ -16,7 +16,15 @@ public class MainActivity extends AppCompatActivity implements OnMessageSendList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         if (savedInstanceState == null) {
-            
+            //fg = getSupportFragmentManager();
+            //FragmentTransaction trans = fg.beginTransaction();
+            //ColorFragment cf = new ColorPickFragment();
+            //trans.add(R.id.colorFragment
+
+
+
+
+
         }
     }
 

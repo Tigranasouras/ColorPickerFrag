@@ -31,7 +31,16 @@ public class ColorPickFragment extends Fragment {
     };
 
     public ColorPickFragment() {
-        // Empty public constructor
+
+        //View view = inFlater.inflate(R.layout.fragment_color_pick, container, false);
+        //grid = view.findViewById(R.id.lightGrid);
+
+
+        //for(int i = 0; i < grid.getChildCount(); i++){
+        //Button currentButton = (Button) grid.getChildAt(i);
+        //CurrentButton.setOnClickListener(buttonListener);
+        //}
+        //return view
     }
 
     @Override
