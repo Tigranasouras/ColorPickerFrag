@@ -20,6 +20,8 @@ public class ColorPickFragment extends Fragment {
     private String[] colors;
     private GridLayout grid;
 
+    private ColorViewModel colorsModel;
+
     private OnMessageSendListener mListener;
 
     private View.OnClickListener buttonListener = new View.OnClickListener() {
