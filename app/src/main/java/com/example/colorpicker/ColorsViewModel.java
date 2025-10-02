@@ -1,5 +1,7 @@
 package com.example.colorpicker;
 
+import android.util.Log;
+
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
@@ -13,6 +15,12 @@ public class ColorsViewModel extends ViewModel {
 
     public ColorsViewModel(){
         colorsLL = new MutableLiveData<>();
+        LinkedList<String> l = new LinkedList<>();
+        colorsLL.setValue(l);
+    }
+
+    public MutableLiveData<LinkedList<String>> getColors(){
+        return colorsLL;
     }
 
     public void setColors(LinkedList<String> l){
@@ -25,9 +33,10 @@ public class ColorsViewModel extends ViewModel {
     }
 
 
-    public void addcolor(String c){
+    public void addColor(String c){
         LinkedList<String> l = getcolors();
         l.add(c);
+        Log.i("Colors", l.toString());
         colorsLL.setValue(l);
     }
 

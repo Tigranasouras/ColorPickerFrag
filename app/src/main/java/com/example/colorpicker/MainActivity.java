@@ -4,6 +4,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.lifecycle.ViewModel;
+import androidx.lifecycle.ViewModelProvider;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -18,6 +20,7 @@ public class MainActivity extends AppCompatActivity implements OnMessageSendList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         if (savedInstanceState == null) {
+            colorsModel = new ViewModelProvider(this).get(ColorsViewModel.class);
             fg = getSupportFragmentManager();
             FragmentTransaction trans = fg.beginTransaction();
             ColorPickFragment cf = new ColorPickFragment();
@@ -25,7 +28,6 @@ public class MainActivity extends AppCompatActivity implements OnMessageSendList
             //ColorListFragment cl = new ColorListFragment();
            // trans.add(R.id.ListFragment, cl, "listFrag");
             trans.commit();
-
 
 
 

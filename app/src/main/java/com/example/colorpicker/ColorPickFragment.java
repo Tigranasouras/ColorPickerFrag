@@ -7,6 +7,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,6 +21,8 @@ public class ColorPickFragment extends Fragment {
     private String[] colors;
     private GridLayout grid;
 
+    private ColorsViewModel colorsModel;
+
 
     private OnMessageSendListener mListener;
 
@@ -27,6 +30,8 @@ public class ColorPickFragment extends Fragment {
         @Override
         public void onClick(View v) {
             int buttonIndex = grid.indexOfChild(v);
+            String currentColor = colors[buttonIndex];
+            colorsModel.addColor(currentColor);
 
         }
     };
@@ -50,6 +55,7 @@ public class ColorPickFragment extends Fragment {
         super.onCreate(savedInstanceState);
         // get the resources String Array bellow
         colors = getResources().getStringArray(R.array.colors_array);
+        colorsModel = new ViewModelProvider(getActivity()).get(ColorsViewModel.class);
     }
 
     @Override
