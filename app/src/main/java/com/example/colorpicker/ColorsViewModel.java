@@ -8,15 +8,15 @@ import java.util.LinkedList;
 public class ColorsViewModel extends ViewModel {
 
     private MutableLiveData<LinkedList<String>>  colorsLL;
-    private ColorViewModel;
+    private ColorsViewModel colorViewModel;
 
 
-    public ColorVieModel(){
+    public ColorsViewModel(){
         colorsLL = new MutableLiveData<>();
     }
 
     public void setColors(LinkedList<String> l){
-        colorsLL.setValue();
+        colorsLL.setValue(l);
 
     }
 
@@ -25,7 +25,7 @@ public class ColorsViewModel extends ViewModel {
     }
 
 
-    public void addcolor(String s){
+    public void addcolor(String c){
         LinkedList<String> l = getcolors();
         l.add(c);
         colorsLL.setValue(l);
