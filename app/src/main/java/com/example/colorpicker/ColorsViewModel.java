@@ -12,6 +12,12 @@ public class ColorsViewModel extends ViewModel {
     private MutableLiveData<LinkedList<String>>  colorsLL;
     private ColorsViewModel colorViewModel;
 
+    //Add the sms to the view model
+    //Add code to check if its a valid hexcode
+    //# followed by 6 instances either digits 0-9 or letters A-F
+    //^ a perfect use for regex
+
+
 
     public ColorsViewModel(){
         colorsLL = new MutableLiveData<>();
