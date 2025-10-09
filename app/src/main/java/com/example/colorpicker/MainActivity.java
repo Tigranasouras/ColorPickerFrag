@@ -10,10 +10,12 @@ import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements OnMessageSendListener {
 
@@ -47,6 +49,14 @@ public class MainActivity extends AppCompatActivity implements OnMessageSendList
 
         }
     }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+
+        String message = intent.getStringExtra("SMS");
+        Toast.makeText(this, "Activ: " + message,Toast.LENGTH_LONG).show();
+}
 
     @Override
     public void onMessageSend(String message) {
